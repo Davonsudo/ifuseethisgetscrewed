@@ -1,0 +1,16 @@
+{
+	"name": "track 2",
+	"end": 400,
+	"track": [
+		{"pos": 40,"type": "ramp4"},
+		{"pos": 61,"type": "ramp5"},
+		{"pos": 80, "type": "ramp4"},
+		{"pos": 97,"type": "ramp5"},
+		{"pos": 105,"type": "ramp1"},
+		{"pos": 110,"type": "ramp1"},
+		{"pos": 115,"type": "ramp1"},
+		{"pos": 120,"type": "ramp1"},
+		{"pos": 180, "type": "ramp2"},
+		{"pos": 240, "type": "ramp2"}
+	]
+}
