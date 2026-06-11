@@ -9,10 +9,18 @@ var RaceScreen = Screen.extend({
 
 	keyBindings: {
 		65: 'lean-back',
+		37: 'lean-back',
 		68: 'lean-forward',
+		39: 'lean-forward',
+		87: 'drive',
+		38: 'drive',
+		32: 'drive',
 		75: 'drive',
+		16: 'over-drive',
+		40: 'over-drive',
 		76: 'over-drive',
 		81: 'quit',
+		27: 'quit',
 	},
 
 	canvas: null,

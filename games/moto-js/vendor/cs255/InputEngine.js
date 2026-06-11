@@ -81,6 +81,7 @@ InputEngineClass = Class.extend({
 		//console.log("here");
 		var action = gInputEngine.bindings[event.keyCode];
 		if (action) {
+			event.preventDefault();
 			gInputEngine.actions[action] = true;
 		}
 	},
@@ -96,6 +97,7 @@ InputEngineClass = Class.extend({
 		var action = gInputEngine.bindings[event.keyCode];
 
 		if (action) {
+			event.preventDefault();
 			gInputEngine.actions[action] = false;
 		}
 	},

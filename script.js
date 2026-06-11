@@ -1,32 +1,32 @@
 const games = [
   {
     title: "Sandboxels",
-    path: "sandboxels/index.html",
+    path: "sandboxels/",
     accent: "#42d392",
   },
   {
     title: "Basketball Legends 2020",
-    path: "games/basketball-legends-2020/index.html",
+    path: "games/basketball-legends-2020/",
     thumbnail: "games/basketball-legends-2020/assets/images/logo.png",
   },
   {
     title: "Retro Bowl",
-    path: "games/retro-bowl/index.html",
+    path: "games/retro-bowl/",
     thumbnail: "games/retro-bowl/img/splash.png",
   },
   {
     title: "Soccer Random",
-    path: "games/soccer-random/index.html",
+    path: "games/soccer-random/",
     thumbnail: "games/soccer-random/images/titlebg-sheet0.png",
   },
   {
     title: "Five Nights at Epstein's",
-    path: "games/five-nights-at-epstein/index.html",
+    path: "games/five-nights-at-epstein/",
     thumbnail: "games/five-nights-at-epstein/assets/images/menubackground.png",
   },
   {
     title: "Moto.js",
-    path: "games/moto-js/index.html",
+    path: "games/moto-js/",
     thumbnail: "games/moto-js/assets/img/title.png",
     accent: "#f97316",
   },
