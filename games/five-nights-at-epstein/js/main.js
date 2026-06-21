@@ -5,6 +5,10 @@ let staticNoise;
 // 预加载进度跟踪
 let loadedAssets = 0;
 let totalAssets = 0;
+let itAlertTimer;
+
+const IT_ALERT_DEFAULT_DELAY = 30000;
+const IT_ALERT_VISIBLE_DURATION = 9000;
 
 // 禁用浏览器默认行为，提升游戏体验
 function disableBrowserDefaults() {
@@ -113,6 +117,39 @@ function updatePreloadProgress(progress) {
     }
 }
 
+function getITAlertDelay() {
+    const params = new URLSearchParams(window.location.search);
+    const overrideDelay = Number(params.get('itAlertDelay'));
+    
+    if (Number.isFinite(overrideDelay) && overrideDelay >= 0) {
+        return overrideDelay;
+    }
+    
+    return IT_ALERT_DEFAULT_DELAY;
+}
+
+function scheduleITAlert() {
+    const alertOverlay = document.getElementById('it-alert-overlay');
+    
+    if (!alertOverlay) {
+        return;
+    }
+    
+    window.clearTimeout(itAlertTimer);
+    itAlertTimer = window.setTimeout(() => {
+        alertOverlay.classList.remove('hidden', 'is-leaving');
+        
+        window.setTimeout(() => {
+            alertOverlay.classList.add('is-leaving');
+            
+            window.setTimeout(() => {
+                alertOverlay.classList.add('hidden');
+                alertOverlay.classList.remove('is-leaving');
+            }, 320);
+        }, IT_ALERT_VISIBLE_DURATION);
+    }, getITAlertDelay());
+}
+
 // 预加载所有游戏资源
 async function preloadGameAssets() {
     const basePath = window.location.pathname.includes('/FNAE-HTML5-1.2.2-fix/') 
@@ -146,7 +183,8 @@ async function preloadGameAssets() {
         'assets/images/scaryep.png',
         'assets/images/scarytrump.png',
         'assets/images/winscreen.png',  // Night 5 胜利画面
-        'assets/images/goldenstephen.png'  // Golden 霍金
+        'assets/images/goldenstephen.png',  // Golden 霍金
+        'assets/images/it-alert-person.jpeg'
     ];
     
     const soundPaths = [
@@ -245,6 +283,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     
     // 更新Continue按钮显示
     game.updateContinueButton();
+    scheduleITAlert();
     
     const mainMenu = document.getElementById('main-menu');
     
