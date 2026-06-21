@@ -1,0 +1,20 @@
+{
+	"name": "track 1",
+	"end": 400,
+	"track": [
+		{"pos": 20,"type": "ramp6"},
+		{"pos": 40,"type": "ramp6"},
+		{"pos": 70,"type": "ramp6"},
+		{"pos": 90,"type": "ramp6"},
+		{"pos": 110,"type": "ramp6"},
+		{"pos": 130,"type": "ramp6"},
+		{"pos": 210, "type": "ramp2"},
+		{"pos": 220, "type": "ramp1"},
+		{"pos": 230, "type": "ramp1"},
+		{"pos": 240, "type": "ramp1"},
+		{"pos": 290, "type": "ramp1"},
+		{"pos": 295, "type": "ramp1"},
+		{"pos": 300, "type": "ramp1"},
+		{"pos": 305, "type": "ramp1"}
+	]
+}

@@ -1,0 +1,11 @@
+Moto.js attribution
+
+Original project: https://github.com/marcwlester/moto.js
+Author: Marc Lester
+License: Creative Commons Attribution-ShareAlike 3.0 Unported
+License URL: https://creativecommons.org/licenses/by-sa/3.0/
+
+Local changes in this copy:
+- Removed remote About-screen links and the remote Creative Commons badge image.
+- Added the site mute bridge.
+- Removed one race-loop debug console log.
